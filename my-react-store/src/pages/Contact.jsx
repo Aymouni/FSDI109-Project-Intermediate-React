@@ -1,4 +1,16 @@
+import { useState } from "react";
+
 function Contact() {
+  const [isEmailVisible, setIsEmailVisible] = useState(true);
+
+  function showEmail() {
+    setIsEmailVisible(true);
+  }
+
+  function hideEmail() {
+    setIsEmailVisible(false);
+  }
+
   return (
     <div className="container mt-5" style={{ maxWidth: "600px" }}>
       <h1 className="text-center mb-2">Contact Us</h1>
@@ -40,7 +52,22 @@ function Contact() {
       <div className="text-center mt-4 text-muted">
         <p>📍 123 Green Street, San Diego, CA</p>
         <p>📞 (555) 123-4567</p>
-        <p>✉️ hello@organika.com</p>
+
+        {isEmailVisible == true ? (
+          <p>✉️ hello@organika.com</p>
+        ) : (
+          <p>Click the button to show the email</p>
+        )}
+
+        <button
+          className="btn btn-outline-success btn-sm me-2"
+          onClick={showEmail}
+        >
+          Show my Email
+        </button>
+        <button className="btn btn-outline-success btn-sm" onClick={hideEmail}>
+          Hide my Email
+        </button>
       </div>
     </div>
   );

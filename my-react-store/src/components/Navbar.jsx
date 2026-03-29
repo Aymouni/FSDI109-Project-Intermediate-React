@@ -5,8 +5,8 @@ import "./Navbar.css";
 // Logic
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+      <div className="container-fluid">
         <a className="navbar-brand fw-bold fs-4" href="#">
           🌿 Organika
         </a>
@@ -43,18 +43,12 @@ function Navbar() {
                 Contact
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/admin">
+                Admin
+              </Link>
+            </li>
           </ul>
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search products..."
-              aria-label="Search"
-            />
-            <button className="btn btn-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
