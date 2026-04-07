@@ -17,7 +17,6 @@ function Admin() {
       price: productPrice,
     };
 
-    // ... is the spread operator to add more products without removing the previous
     setProducts([...products, product]);
 
     setProductTitle("");
@@ -96,11 +95,19 @@ function Admin() {
       </div>
 
       <div className="container mt-4">
-        <h5 className="mb-3">Products List:</h5>
+        <div className="d-flex flex-column gap-2 mb-3 align-items-center">
+          <div className="bg-dark bg-opacity-50 rounded p-3 align-self-center">
+            <h5 className="text-white mb-0">Products List:</h5>
+          </div>
 
-        {products.length == 0 ? (
-          <p>There aren't any products</p>
-        ) : (
+          {products.length == 0 && (
+            <div className="bg-dark bg-opacity-50 rounded p-3 align-self-center">
+              <p className="text-white mb-0">There aren't any products</p>
+            </div>
+          )}
+        </div>
+
+        {products.length > 0 && (
           <div className="row g-3">
             {products.map((product) => (
               <div key={product.title} className="col-md-4">
@@ -112,9 +119,9 @@ function Admin() {
                     style={{ height: "200px" }}
                   />
                   <div className="card-body">
-                    <p>{product.category}</p>
+                    <p className="text-muted mb-1">{product.category}</p>
                     <h5>{product.title}</h5>
-                    <h5>${product.price}</h5>
+                    <h5 className="text-success">${product.price}</h5>
                   </div>
                 </div>
               </div>

@@ -1,19 +1,21 @@
 function Home() {
   return (
     <div>
-      <div className="text-center py-4">
-        <p className="lead" style={{ color: "#2d6a4f", fontSize: "1.2rem" }}>
-          Your trusted source for fresh, organic fruits and berries 🌿
-        </p>
-        <a href="/shop" className="btn btn-success btn-lg px-5 mt-2">
-          Shop Now
-        </a>
+      <div className="text-center py-5">
+        <div className="d-inline-block bg-dark bg-opacity-50 rounded p-4">
+          <p className="lead fw-bold fs-4 text-white mb-3">
+            Your trusted source for fresh, organic fruits and berries 🌿
+          </p>
+          <a href="/shop" className="btn btn-success btn-lg px-5">
+            Shop Now
+          </a>
+        </div>
       </div>
 
       <div className="container my-5">
         <div className="row text-center g-4">
           <div className="col-md-4">
-            <div className="p-4 border rounded shadow-sm h-100">
+            <div className="p-4 border rounded shadow-sm h-100 bg-white">
               <h2>🍓</h2>
               <h5 className="fw-bold mt-2">Fresh Berries</h5>
               <p className="text-muted">
@@ -23,7 +25,7 @@ function Home() {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="p-4 border rounded shadow-sm h-100">
+            <div className="p-4 border rounded shadow-sm h-100 bg-white">
               <h2>🍎</h2>
               <h5 className="fw-bold mt-2">Organic Fruits</h5>
               <p className="text-muted">
@@ -33,7 +35,7 @@ function Home() {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="p-4 border rounded shadow-sm h-100">
+            <div className="p-4 border rounded shadow-sm h-100 bg-white">
               <h2>🚚</h2>
               <h5 className="fw-bold mt-2">Fast Delivery</h5>
               <p className="text-muted">
@@ -45,14 +47,19 @@ function Home() {
         </div>
       </div>
 
-      <div className="text-center py-5" style={{ backgroundColor: "#f4f9f4" }}>
-        <h3 className="fw-bold mb-3">Ready to eat healthier? 🌱</h3>
-        <p className="text-muted mb-4">
-          Join thousands of happy customers living a fresher, greener lifestyle.
-        </p>
-        <a href="/shop" className="btn btn-success btn-lg px-5">
-          Browse Our Products
-        </a>
+      <div className="text-center py-5">
+        <div className="d-inline-block bg-dark bg-opacity-50 rounded p-4">
+          <h3 className="fw-bold mb-3 text-white">
+            Ready to eat healthier? 🌱
+          </h3>
+          <p className="text-white mb-4">
+            Join thousands of happy customers living a fresher, greener
+            lifestyle.
+          </p>
+          <a href="/shop" className="btn btn-success btn-lg px-5">
+            Browse Our Products
+          </a>
+        </div>
       </div>
     </div>
   );
