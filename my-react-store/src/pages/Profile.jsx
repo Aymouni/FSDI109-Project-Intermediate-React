@@ -6,7 +6,7 @@ function Profile() {
 
   return (
     <div className="container mt-5">
-      <h1 className="text-center fw-bold mb-1">My Profile</h1>
+      <h1 className="text-center mb-1">My Profile</h1>
       <p className="text-center text-muted mb-4">Your personal information</p>
 
       <div className="row g-4">
